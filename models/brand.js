@@ -4,7 +4,7 @@ const Brand = new Schema(
     {
       name: { type: String, required: true },
       priceRange: { type: String, required: true },
-      brandId: { type: Number, required: true}
+      brandNumber: { type: Number, required: true}
     },
     { timestamps: true }
 )
