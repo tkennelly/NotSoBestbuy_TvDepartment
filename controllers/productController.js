@@ -9,7 +9,7 @@ const getAllProducts = async (req, res) => {
     }
 }
 
-const getProduct = async (req, res) => {
+const getProductById = async (req, res) => {
     try {
         const {id} = req.params
         const product = await Product.findById(id)
@@ -23,7 +23,24 @@ const getProduct = async (req, res) => {
     }
 }
 
+const findProduct = async (req, res) => {
+    console.log(req.query)
+    try {
+        console.log(req.query)
+        const products = await Product.find(req.query)
+        if (products) {
+            return res.status(200).json({products})
+        } else {
+            return res.status(400).json({message: 'Product does not exist'})
+        }
+    } catch (e) {
+        console.log(req.query)
+        return res.status(500).send(e.message)
+    }
+}
+
 module.exports = {
     getAllProducts,
-    getProduct
+    getProductById,
+    findProduct
 }
