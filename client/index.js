@@ -2,6 +2,7 @@ const submitButton = document.querySelector('#submit')
 const searchBar = document.querySelector('input')
 
 submitButton.addEventListener('click',async()=>{
-    const lookup = await axios.get('localhost:3001')
-    console.log(lookup)
+    axios.get('http://localhost:3001/api/brands')
+    .then((res)=>console.log(res.data.brands))
+    .catch((e)=>console.log(e))
 })
