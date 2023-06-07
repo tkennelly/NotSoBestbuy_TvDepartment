@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const controller = require('../controllers/reviewController.js')
 
-router.post('/', controller.createReview)
+router.post('/post', controller.createReview)
 router.get('/', controller.getAllReviews)
 router.get('/:id', controller.getReviewById)
 router.get('/product/:id', controller.getReviewsByProductId)
