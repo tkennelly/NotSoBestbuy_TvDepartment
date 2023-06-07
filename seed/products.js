@@ -65,6 +65,50 @@ const main = async () => {
             size: `85"`,
             modelNum: 479372749,
             itemsInStock: 5
+          },
+          {
+            name: `Class 3-Series HD 720p LED Smart Roku TV`,
+            price: 129.99,
+            description: `The TCL 3-Series is the simply smart way to enjoy endless entertainment. Enjoy over half a million movies and TV episodes available to stream plus sports, news, music, kids and family, food, science and tech, fitness, foreign language and so much more. Start streaming free TV right from your home screen or browse 250+ free live channels with the Live TV Channel Guide to find what to watch next. Your favorite broadcast TV, streaming channels, gaming console and other devices are front-and-center within a simple, customizable home screen.`,
+            brand: brand4[0].id,
+            size: `32"`,
+            modelNum: 5738290571,
+            itemsInStock: 4
+          },
+          {
+            name: `Class 3-Series FHD 1080p LED Smart Google TV`,
+            price: 129.99,
+            description: `Your entertainment is all in one place. Choose from 700,000+ movies and shows from across your favorite apps, intelligently organized just for you. Tune into live shows, curate watchlists, and get recommendations based on what you have watched and what interests you. Finding what to watch has never been easier with a TCL featuring Google TV. Use your voice to find movies, stream apps, play music, and control the TV. Ask Google to find a specific title, search by genre, or get personalized recommendations by saying, “what should I watch?” Even get answers like sports scores, control smart home devices, and more. Press the Google Assistant button on the remote control to get started.`,
+            brand: brand4[0].id,
+            size: `32"`,
+            modelNum: 5738292897,
+            itemsInStock: 3
+          },
+          {
+            name: `Class D-Series LED 720p Smart TV`,
+            price: 99.99,
+            description: `Versatility and performance collide with the new VIZIO D-Series HD Smart TV. D-Series comes loaded with a full array backlight for better contrast and uniformity, brilliant 720p HD resolution and an ultra-fast VIZIO IQ processor with support for immersive audio pass-through for Dolby Atmos and DTS:X. Stream it all with the award-winning SmartCast platform loaded with the best selection of built-in apps including WatchFree+ that lets you enjoy free access to live TV and hundreds of free channels right out of the box.`,
+            brand: brand5[0].id,
+            size: `24"`,
+            modelNum: 6950049284,
+            itemsInStock: 2
+          },
+          {
+            name: `Class D-Series Full HD Smart TV`,
+            price: 169.99,
+            description: `Celebrate VIZIO's 20th Anniversary with the NEW VIZIO D-Series Smart TV. America's Smart TV allows you to access millions of movies, shows, sports, news, and more in seconds in cinematic picture quality. New features include smoother gaming, VIZIO Voice Remote for simple searching, and Bluetooth headphone capability optimized with built-in streaming - all powered by the IQ Processor and fast dual-band WiFi 5.`,
+            brand: brand5[0].id,
+            size: `32"`,
+            modelNum: 6950042863,
+            itemsInStock: 1
           }
     ]
+    await Product.insertMany(products)
+    console.log('Created products!')
 }
+
+const run = async () => {
+    await main()
+    db.close()
+  }
+  run()
