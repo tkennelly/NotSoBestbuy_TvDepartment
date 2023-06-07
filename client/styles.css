@@ -24,6 +24,7 @@ body {
     position: relative;
     display: flex;
     align-items: row;
+    justify-content: center;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -71,7 +72,6 @@ nav {
     justify-content: space-between;
     /* margin-left: 100px; */
     padding: 20px 60px 0 60px;
-    position: absolute;
     z-index: 0;
 }
 
