@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const controllers = require('../controllers/brandController')
+const controller = require('../controllers/brandController')
 
-router.get('/', controllers.getAllBrands)
-router.get('/:id', controllers.getBrand)
+router.get('/', controller.getAllBrands)
+router.get('/:id', controller.getBrand)
 
 
 module.exports = router

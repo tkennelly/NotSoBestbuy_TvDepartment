@@ -16,7 +16,7 @@ const getBrand = async(req,res) =>{
         if(brand){
             return res.status(200).json({ brand })
         } else {
-            return res.status(400).send('Brand Doesnt Exist')
+            return res.status(400).send('Brand Does not Exist')
         }
     } catch (e){
         return res.status(500).send(e.message)
