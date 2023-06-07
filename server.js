@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(bodyParse.json())
 app.use(logger('dev'))
 
-app.listen(PORT, () => console(`Server running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 
 app.get('/', (req, res) => res.json({message: 'This is the home page'}))
 
