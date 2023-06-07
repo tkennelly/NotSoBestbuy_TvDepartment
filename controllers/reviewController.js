@@ -16,7 +16,7 @@ const getReview = async(req,res) => {
         if(brand){
             return res.status(200).json({ review })
         } else {
-            return res.status(400).send('Review doesnt exist')
+            return res.status(400).send('Review does not exist')
         }
     } catch(e){
         res.status(500).send(e.message)
