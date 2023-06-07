@@ -6,8 +6,9 @@ const Product = new Schema(
       price: { type: Number, required: true },
       description: { type: String, required: true },
       brand: { type: Schema.Types.ObjectId, ref: 'brand'},
+      size: { type: String, required: true },
       modelNum: { type: Number, required: true },
-      ItemsInStock: { type: Number, required: true }
+      itemsInStock: { type: Number, required: true }
     },
     { timestamps: true }
 )
