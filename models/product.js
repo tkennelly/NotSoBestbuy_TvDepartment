@@ -8,8 +8,8 @@ const Product = new Schema(
       brand: { type: Schema.Types.ObjectId, ref: 'brand'},
       size: { type: String, required: true },
       modelNum: { type: Number, required: true },
-      itemsInStock: { type: Number, required: true },
-      img : { type: URL(String), required: true}
+      itemsInStock: { type: Number, required: true }
+      //img : { type: new URL(String), required: true}
     },
     { timestamps: true }
 )
