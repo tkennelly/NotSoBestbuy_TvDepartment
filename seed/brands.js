@@ -33,7 +33,7 @@ const main = async () => {
           }
     ]
     await Brand.insertMany(brands)
-    console.log('Created products!')
+    console.log('Created brands!')
 }
 
 const run = async () => {
