@@ -1,4 +1,3 @@
-const { identity } = require('update/lib/utils')
 const { Review } = require('../models')
 
 const createReview = async (req, res) => {
