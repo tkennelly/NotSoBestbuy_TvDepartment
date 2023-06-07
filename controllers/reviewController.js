@@ -1,3 +1,4 @@
+const { identity } = require('update/lib/utils')
 const { Review } = require('../models')
 
 const createReview = async (req, res) => {
@@ -19,14 +20,28 @@ const getAllReviews = async (req, res) =>{
     }
 }
 
-const getReview = async (req,res) => {
+const getReviewById = async (req,res) => {
     try{
         const { id } = req.params
         const review = await Review.findById(id)
-        if(brand){
+        if(review){
             return res.status(200).json({ review })
         } else {
             return res.status(400).json({message:'Review does not exist.'})
+        }
+    } catch(e){
+        return res.status(500).send(e.message)
+    }
+}
+
+const getReviewsByProductId = async (req,res) => {
+    try{
+        const { id } = req.params
+        const reviews = await Review.find({productId: id})
+        if(reviews){
+            return res.status(200).json({ reviews })
+        } else {
+            return res.status(400).json({message:'Product/Review does not exist.'})
         }
     } catch(e){
         return res.status(500).send(e.message)
@@ -65,7 +80,8 @@ const deleteReview = async (req, res) => {
 module.exports = {
     createReview,
     getAllReviews,
-    getReview,
+    getReviewById,
+    getReviewsByProductId,
     updateReview,
     deleteReview
 }
