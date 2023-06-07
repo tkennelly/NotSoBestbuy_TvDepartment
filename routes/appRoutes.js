@@ -1,14 +1,12 @@
 const express = require('express')
 const router = express.Router()
 
-const TypeRouter = require('./typeRoute.js')
+const BrandRouter = require('./brandRoute.js')
 const ProductRouter = require('./productRoute.js')
 
-router.use('/types', TypeRouter)
+router.use('/brands', BrandRouter)
 router.use('/products', ProductRouter)
 
-module.exports = {
-    TypeRouter,
-    ProductRouter
-}
+module.exports = router
+
 
