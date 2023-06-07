@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 const ProductSchema = require('./product')
-const TypeSchema = require('./type')
+const BrandSchema = require('./brand')
 
 
 const Product = mongoose.model('Product', ProductSchema)
-const Type = mongoose.model('Type', TypeSchema)
+const Brand = mongoose.model('Type', BrandSchema)
 
 module.exports = {
   Product,
-  Type
+  Brand
 }
