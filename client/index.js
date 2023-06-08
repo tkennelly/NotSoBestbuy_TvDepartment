@@ -12,7 +12,7 @@ let brandName = document.querySelector('#brand-name')
 let priceRange = document.querySelector('#price-range')
 let brandNumber = document.querySelector('#brand-number')
 let img = document.querySelector('#image')
-let review = document.querySelector('textarea')
+let review = document.querySelector('#reviewtext')
 
 const star1 = document.querySelector('#star1')
 const star2 = document.querySelector('#star2')
