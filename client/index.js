@@ -12,6 +12,7 @@ let brandName = document.querySelector('#brand-name')
 let priceRange = document.querySelector('#price-range')
 let brandNumber = document.querySelector('#brand-number')
 let img = document.querySelector('#image')
+let review = document.querySelector('textarea')
 
 const star1 = document.querySelector('#star1')
 const star2 = document.querySelector('#star2')
@@ -28,11 +29,38 @@ star4.addEventListener('click',()=>score = 4)
 star5.addEventListener('click',()=>score = 5)
 
 const addReview = async() => {
-    console.log('working', score, reviewSubmit.value)
-    await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
+    console.log('working')
+    console.log('working', score, review.value)
+    const response = await axios.get(`http://localhost:3001/api/products`)
+    str = searchBar.value
+    let index = null
+    if (str.match(/micro\s*led/gi)) {index = 0}
+    else if (str.match(/neo\s*qled/gi)) {index = 1}
+    else if (str.match(/c2\s*series/gi)) {index = 2}
+    else if (str.match(/uq75\s*series/gi)) {index = 3}
+    else if (str.match(/bravia\s*xr\s*x92/gi)) {index = 4}
+    else if (str.match(/bravia\s*xr\s*z9k/gi)) {index = 5}
+    else if (str.match(/3-series\s*hd/gi)) {index = 6}
+    else if (str.match(/3-series\s*fhd/gi)) {index = 7}
+    else if (str.match(/d-series\s*led/gi)) {index = 8}
+    else if(str.match(/d-series\s*full/gi)) {index = 9}
+    console.log(response.data.products[index])
+    const id = response.data.products[index].id
+    // const post = await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
+    await axios.post('http://localhost:3001/api/reviews/post', { 
+        score: score,
+        comment: review.value,
+        productId: id
+    })
+    .then(function (response) {
+        console.log(response); 
+    })
+    .catch(function (error) {
+        console.log(error); 
+    }); 
 }
 
-reviewSubmit.addEventListener('submit', addReview)
+reviewSubmit.addEventListener('click', addReview)
 
 //let selectedBrand = document.getElementById('brandDropdown').value
 // console.log(selectedBrand)
@@ -74,7 +102,6 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[index].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[index].brandNum}`
     }
-    
 }
 
 submitButton.addEventListener('click', searchProducts)
