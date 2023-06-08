@@ -16,7 +16,7 @@ const clickedVIZIO = false
 
 sony.addEventListener('click', ()=> {
     if (clickedSony === false){
-        clickedSony=true
+        clickedSony = true
         sony.style.color = '#00AAD2'
     } else if (clickedSony === true){
         clickedSony = false 
@@ -26,16 +26,10 @@ sony.addEventListener('click', ()=> {
 
 if (clickedSony === true){
     submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
+        await axios.get('http://localhost:3001/api/products/find/query?brand=Sony')
         .then((res)=>{
             console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === '6480cfccdf37ae300c0b0a89'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not sony')
-                }
-            }
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
         })
         .catch((e)=>console.log(e))
     })
@@ -104,10 +98,10 @@ if (clickedSony === true){
 
 //if (sony.style.backgroundColor === '#D9D9D9'){
     submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
+        await axios.get('http://localhost:3001/api/products/find/query?brand=Sony')
         .then((res)=>{
             console.log(res.data.products)
-            for(let i = 0;i<10;i++){
+            for(let i = 0; i < res.data.products.length;i++){
                 infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
             }
         })
