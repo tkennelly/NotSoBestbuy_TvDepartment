@@ -23,6 +23,19 @@ body {
   .dropdown {
     display: flex;
     align-items: row;
+    margin-left: 200px;
+  }
+
+  #brandDropdown {
+    margin-right: 100px;
+  }
+
+  #priceDropdown {
+    margin-right: 100px;
+  }
+
+  #sizeDropdown {
+    margin-right: 100px;
   }
   
  
