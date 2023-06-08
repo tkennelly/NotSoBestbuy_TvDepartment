@@ -49,7 +49,6 @@ const addReview = async(e) => {
     else if(str.match(/d-series\s*full/gi)) {index = 9}
     console.log(response.data.products[index])
     const id = response.data.products[index].id
-    ul.insertAdjacentHTML('beforeend',`<li>${review.value}</li>`)
     // const post = await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
     await axios.post('http://localhost:3001/api/reviews/post', { 
         score: score,
@@ -58,6 +57,10 @@ const addReview = async(e) => {
     })
     .then(function (response) {
         console.log(response); 
+        ul.insertAdjacentHTML('beforeend',`<li>${response.data.review.comment}</li>`)
+        ul.insertAdjacentHTML('beforeend',`<li>${response.data.review.score} stars</li>`)
+        ul.insertAdjacentHTML('beforeend',`<li>${response.data.review.createdAt}</li>`)
+        console.log(response.data.review)
     })
     .catch(function (error) {
         console.log(error); 
