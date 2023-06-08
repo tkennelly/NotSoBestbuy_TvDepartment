@@ -24,17 +24,17 @@
     <div class="dropdown">
       <button class="dropbtn">Brands</button>
       <div class="dropdown-content">
-        <a id="samsung" href="#">Samsung</a>
-        <a id="sony" href="#">Sony</a>
-        <a id="lg" href="#">LG</a>
-        <a id="tcl" href="#">TCL</a>
-        <a id="vizio" href="#">VIZIO</a>
+        <a class="samsung" href="#">Samsung</a>
+        <a class="sony" href="#">Sony</a>
+        <a class="lg" href="#">LG</a>
+        <a class="tcl" href="#">TCL</a>
+        <a class="vizio" href="#">VIZIO</a>
       </div>
       <button class="dropbtn">Price Range</button>
          <div class="dropdown-content">
-        <a id="budget" href="#">Budget</a>
-        <a id="medium" href="#">Medium</a>
-        <a id="high" href="#">High</a>
+        <a href="#">Budget</a>
+        <a href="#">Medium</a>
+        <a href="#">High</a>
       </div>
       <button class="dropbtn">Size</button>
          <div class="dropdown-content">
@@ -53,18 +53,39 @@
         <a href="#">High</a>
       </div>
     </div>
-    <div id="info-div">
-      <ul></ul>
+
+    <div class="api-product">
+      <h2 id="name">name: </h2>
+      <h2 id="price">price: </h2>
+      <h2 id="description">description: </h2>
+      <h2 id="brand">brand: </h2>
+      <h2 id="size">size: </h2>
+      <h2 id="model">model: </h2>
+      <h2 id="stock">stock: </h2>
     </div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
-    <div class="product"></div>
+    
+    <div class="api-brand">
+      <h2 id="brand-name">name: </h2>
+      <h2 id="price-range">price: </h2>
+      <h2 id="brand-number">brand number: </h2>
+    </div>
+
+    <form class="review-form">
+      <h2>Submit your review of a TV!</h2>
+      <h3>Rate 1-5 and write a comment, then hit 'submit'!</h3>
+        <input type="radio" id="1star" name="star-rating" value="1">
+        <label for="1star"> 1 Star</label><br>
+        <input type="radio" id="2star" name="star-rating" value="2">
+        <label for="2star"> 2 Stars</label><br>
+        <input type="radio" id="3star" name="star-rating" value="3">
+        <label for="3star"> 3 Stars</label>
+        <input type="radio" id="4star" name="star-rating" value="4">
+        <label for="4star"> 4 Stars</label>
+        <input type="radio" id="5star" name="star-rating" value="5">
+        <label for="5star"> 5 Stars</label>
+      <input type="text"></input>
+      <input type="submit">
+    </form>
   </main>
 	<script src="index.js"></script>
   </body>
