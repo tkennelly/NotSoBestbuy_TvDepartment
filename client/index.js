@@ -29,7 +29,8 @@ star3.addEventListener('click',()=>score = 3)
 star4.addEventListener('click',()=>score = 4)
 star5.addEventListener('click',()=>score = 5)
 
-const addReview = async() => {
+const addReview = async(e) => {
+    e.preventDefault()
     console.log('working')
     console.log('working', score, review.value)
     const response = await axios.get(`http://localhost:3001/api/products`)
