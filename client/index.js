@@ -31,13 +31,7 @@ const addReview = async() => {
     await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
 }
 
-reviewSubmit.addEventListener('click',()=>{
-    if (score !== 'unknown'){
-        addReview()
-    } else {
-        console.log('no review to submit')
-    }
-})
+reviewSubmit.addEventListener('submit', addReview)
 
 let selectedBrand = document.getElementById('brandDropdown').value
 console.log(selectedBrand)
