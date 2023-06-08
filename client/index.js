@@ -20,7 +20,7 @@ const star4 = document.querySelector('#star4')
 const star5 = document.querySelector('#star5')
 let reviewSubmit = document.querySelector('#submit2')
 
-const score = 'unknown'
+let score = 'unknown'
 star1.addEventListener('click',()=>score = 1)
 star2.addEventListener('click',()=>score = 2)
 star3.addEventListener('click',()=>score = 3)
@@ -28,6 +28,7 @@ star4.addEventListener('click',()=>score = 4)
 star5.addEventListener('click',()=>score = 5)
 
 const addReview = async() => {
+    console.log('working', score, reviewSubmit.value)
     await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
 }
 
