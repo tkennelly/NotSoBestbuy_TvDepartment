@@ -17,7 +17,7 @@ const star2 = document.querySelector('#2star')
 const star3 = document.querySelector('#3star')
 const star4 = document.querySelector('#4star')
 const star5 = document.querySelector('#5star')
-let reviewSubmit = document.querySelector('#review-submit')
+let reviewSubmit = document.querySelector('#submit2')
 
 const score = 'unknown'
 star1.addEventListener('click',()=>score = 1)
