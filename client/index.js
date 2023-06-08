@@ -8,110 +8,94 @@ const lg = document.querySelector('#lg')
 const tcl = document.querySelector('#tcl')
 const vizio = document.querySelector('#vizio')
 
-const clickedSony = false
-const clickedSamsung = false
-const clickedLG = false
-const clickedTCL = false
-const clickedVIZIO = false
+let clickedSony = false
+let clickedSamsung = false
+let clickedLG = false
+let clickedTCL = false
+let clickedVIZIO = false
 
 sony.addEventListener('click', ()=> {
     if (clickedSony === false){
         clickedSony=true
         sony.style.color = '#00AAD2'
+        console.log(clickedSony)
     } else if (clickedSony === true){
         clickedSony = false 
-        sony.style.color = '#d9d9d9'
+        sony.style.color = 'black'
+        console.log('clicked sony is true')
     }
 })
 
+sonyKey = '6480cfccdf37ae300c0b0a8b'
+samsungKey = '6480cfccdf37ae300c0b0a89'
+lgKey = '6480cfccdf37ae300c0b0a8a'
+tclKey = '6480cfccdf37ae300c0b0a8c'
+vizioKey = '6480cfccdf37ae300c0b0a8d'
+
+
+
+const sonyFunction = async()=>{
+    console.log('running')
+    await axios.get(`http://localhost:3001/api/products/find/query?brand=${sonyKey}`)
+    .then((res)=>{
+        console.log(res)
+        for(let i = 0; i < res.data.products.length;i++){
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
+        }
+    })
+    .catch((e)=>console.log(e))
+}
+
+const samsungFunction = async()=>{
+    await axios.get(`https://localhost:3001/api/products/find/query?brand=${samsungKey}`)
+    .then((res)=>{
+        console.log(res.data.products)
+        for(let i = 0;i<10;i++){
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
+        }
+    })
+    .catch((e)=>console.log(e))
+}
+
+const lgFunction = async() =>{
+    await axios.get(`https://localhost:3001/api/products/find/query?brand=${lgKey}`)
+    .then((res)=>{
+        console.log(res.data.products)
+        for(let i = 0;i<10;i++){
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
+        }
+    })
+    .catch((e)=>console.log(e))
+}
+
+const tclFunction = async() =>{
+    await axios.get(`https://localhost:3001/api/products/find/query?brand=${tclKey}`)
+    .then((res)=>{
+        console.log(res.data.products)
+        for(let i = 0;i<10;i++){
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
+        }
+    })
+    .catch((e)=>console.log(e))
+}
+
+const vizioFunction = async() =>{
+    await axios.get(`https://localhost:3001/api/products/find/query?brand=${vizioKey}`)
+    .then((res)=>{
+        console.log(res.data.products)
+        for(let i = 0;i<10;i++){
+            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
+        }
+    })
+    .catch((e)=>console.log(e))
+}
+
 if (clickedSony === true){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === '6480cfccdf37ae300c0b0a89'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not sony')
-                }
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
-} else if (clickedSamsung === true){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === 'Samsung'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not samsung')
-                }
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
-} else if (clickedLG === true){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === 'LG'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not lg')
-                }
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
-} else if (clickedTCL === true){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === 'TCL'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not tcl')
-                }
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
-} else if (clickedVIZIO === true){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                if (res.data.products[i].brand === 'VIZIO'){
-                    infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-                } else {
-                    console.log('not vizio')
-                }
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
+    submitButton.addEventListener('click', sonyFunction())
+} else {
+    submitButton.removeEventListener('click', sonyFunction())
 }
 
 
-//if (sony.style.backgroundColor === '#D9D9D9'){
-    submitButton.addEventListener('click',async()=>{
-        await axios.get('http://localhost:3001/api/products')
-        .then((res)=>{
-            console.log(res.data.products)
-            for(let i = 0;i<10;i++){
-                infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-            }
-        })
-        .catch((e)=>console.log(e))
-    })
-//}
+
 
