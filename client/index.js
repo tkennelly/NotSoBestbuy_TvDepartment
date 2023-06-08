@@ -14,6 +14,7 @@ let brandNumber = document.querySelector('#brand-number')
 let img = document.querySelector('#image')
 let review = document.querySelector('#reviewtext')
 let showreviews = document.querySelector('#reviews')
+let ul = document.querySelector('ul')
 
 const star1 = document.querySelector('#star1')
 const star2 = document.querySelector('#star2')
@@ -48,7 +49,7 @@ const addReview = async(e) => {
     else if(str.match(/d-series\s*full/gi)) {index = 9}
     console.log(response.data.products[index])
     const id = response.data.products[index].id
-    showreviews.innerHTML = review.value
+    ul.insertAdjacentHTML('beforeend',`<li>${review.value}</li>`)
     // const post = await axios.create(`http://localhost:3001/api/reviews?score=${score}&comment=${reviewSubmit.value}&productId=${productModel.innerHTML.substring(6)}`)
     await axios.post('http://localhost:3001/api/reviews/post', { 
         score: score,
