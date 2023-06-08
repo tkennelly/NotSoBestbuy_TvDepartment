@@ -22,7 +22,7 @@
   </header>
   <main>
     <div class="dropdown">
-      <drop1 id="drop1">
+      <!-- <drop1 id="drop1">
       <button class="dropbtn" id="db1">Brands</button>
       <div class="dropdown-content" id="ddcontent1">
         <a class="samsung" href="#">Samsung</a>
@@ -30,26 +30,34 @@
         <a class="lg" href="#">LG</a>
         <a class="tcl" href="#">TCL</a>
         <a class="vizio" href="#">VIZIO</a>
-      </div>
-      <!-- <select id="brandDropdown">
+      </div> -->
+      <select id="brandDropdown">
+        <option value="Brand">Brand</option>
         <option value="Samsung">Samsung</option>
         <option value="Sony">Sony</option>
         <option value="LG">LG</option>
         <option value="TCL">TCL</option>
         <option value="VIZIO">VIZIO</option>
-      </select> -->
-      </drop1>
-      <drop2 id="drop2">
-      <button class="dropbtn" id="db2">Price Range</button>
+      </select>
+      <!-- </drop1> -->
+      <!-- <drop2 id="drop2"> -->
+        <select id="priceDropdown">
+          <option value='Price'>Price</option>
+          <option value='Budget'>Budget</option>
+          <option value='Medium'>Medium</option>
+          <option value='High'>High</option>
+        </select>
+      <!-- <button class="dropbtn" id="db2">Price Range</button>
          <div class="dropdown-content" id="ddcontent2">
         <a href="#">Budget</a>
         <a href="#">Medium</a>
         <a href="#">High</a>
-      </div>
-      </drop2>
-      <drop3 id="drop3">
-      <button class="dropbtn" id="db3">Size</button>
-      <!--<select id="sizeDropdown">
+      </div> -->
+      <!-- </drop2> -->
+      <!-- <drop3 id="drop3"> -->
+      <!-- <button class="dropbtn" id="db3">Size</button> -->
+      <select id="sizeDropdown">
+        <option value='Size'>Size</option>
         <option value='24"'>24"</option>
         <option value='32"'>32"</option>
         <option value='55"'>55"</option>
@@ -58,8 +66,8 @@
         <option value='98"'>98"</option>
         <option value='100"'>100"</option>
         <option value='110"'>110"</option>
-      </select> -->
-         <div class="dropdown-content" id="ddcontent3">
+      </select>
+         <!-- <div class="dropdown-content" id="ddcontent3">
           <a href="#">24"</a>
           <a href="#">32"</a>
           <a href="#">55"</a>
@@ -68,15 +76,20 @@
           <a href="#">98"</a> 
           <a href="#">100"</a>
           <a href="#">110"</a>
-       </div>
-       </drop3>
-       <drop4 id="drop4">
+       </div> -->
+       <!-- </drop3> -->
+       <!-- <drop4 id="drop4">
        <button class="dropbtn" id="db4">Stock</button>
          <div class="dropdown-content" id="ddcontent4">
         <a href="#">Low</a>
         <a href="#">High</a>
       </div>
-      </drop4>
+      </drop4> -->
+      <select id="stockDropdown">
+        <option value='Stock'>Stock</option>
+        <option value='Low'>Low</option>
+        <option value='High'>High</option>
+      </select>
     </div>
     <div class="allContent">
     <div class="api-product">
