@@ -12,11 +12,11 @@ let brandName = document.querySelector('#brand-name')
 let priceRange = document.querySelector('#price-range')
 let brandNumber = document.querySelector('#brand-number')
 
-const star1 = document.querySelector('#1star')
-const star2 = document.querySelector('#2star')
-const star3 = document.querySelector('#3star')
-const star4 = document.querySelector('#4star')
-const star5 = document.querySelector('#5star')
+const star1 = document.querySelector('#star1')
+const star2 = document.querySelector('#star2')
+const star3 = document.querySelector('#star3')
+const star4 = document.querySelector('#star4')
+const star5 = document.querySelector('#star5')
 let reviewSubmit = document.querySelector('#submit2')
 
 const score = 'unknown'
