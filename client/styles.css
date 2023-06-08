@@ -1,58 +1,67 @@
 body {
     background-color: #AFD3E2;
-    /* width: 1025px;
-    height: 1000px; */
-    margin:0;
-    opacity: 1;
+    height: 1000px;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 /* Dropdown Button */
 .dropbtn {
     background-color: #F5F5F5;
     color: rgba(20, 108, 148, 0.6);
-    width: 125px;
-      height: 25px;
-      margin-left: 100px;
+    width: 100px;
+      height: 30px;
+      margin-left: 120px;
       display: flex;
       /* justify-content: space-between; */
       padding: 5px 0 0 5px;
-       justify-content: space-around;
+
   } 
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
-    position: relative;
     display: flex;
     align-items: row;
-    justify-content: center;
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: relative;
     background-color: #f1f1f1;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: 100px;
+    position: absolute;
+    overflow: auto;
+    margin-left: 120px;
+  }
+
+ .dropdown-content a {
+  color: black;
   }
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #D9D9D9;}
+
+  #drop1 a:hover {background-color: #D9D9D9; color: #146C94}
+  #drop2 a:hover {background-color: #D9D9D9; color: #146C94}
+  #drop3 a:hover {background-color: #D9D9D9; color: #146C94}
+  #drop4 a:hover {background-color: #D9D9D9; color: #146C94}
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+  #drop1:hover .dropdown-content {display: grid;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #D9D9D9;}
+  #drop1:hover .dropbtn {background-color: #D9D9D9;}
+
+  #drop2:hover .dropdown-content {display: grid;}
+  #drop2:hover .dropbtn {background-color: #D9D9D9;}
+
+  #drop3:hover .dropdown-content {display: grid;}
+  #drop3:hover .dropbtn {background-color: #D9D9D9;}
+
+  #drop4:hover .dropdown-content {display: grid;}
+  #drop4:hover .dropbtn {background-color: #D9D9D9;}
+
+
 
 #submit {
     background-color: #146C94;
@@ -71,7 +80,7 @@ nav {
     align-items: row;
     justify-content: space-between;
     /* margin-left: 100px; */
-    padding: 20px 60px 0 60px;
+    padding: 20px 60px 30px 60px;
     z-index: 0;
 }
 
@@ -97,3 +106,80 @@ input {
     border-radius: 7px;
     border: none;
 }
+
+.review-form {
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  padding: none;
+  background-color: #00AAD2;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.radios {
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+  display: grid;
+  vertical-align: middle;
+}
+
+
+.api-product {
+  height: 730px;
+  border: solid 1px white;
+  border-radius: 5px;
+  background-color: #AFD3E2;
+  width: 800px;
+  font-size: 12px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+
+.allContent {
+  display: flex;
+  align-items: row;
+}
+
+#drop1 #drop2 #drop3 #drop4 {
+  display: flex;
+  align-items: column;
+}
+
+#submit2 {
+  background-color: #146C94;
+  color: #AFD3E2;
+  border-radius: 2px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color:rgba(20, 108, 148, 0.6)
+}
+
+#submit2:hover {
+  cursor: pointer;
+  background-color:rgba(20, 108, 148, 0.6)
+}
+
+#reviews {
+  margin-left: 10px;
+  border-radius: 5px;
+  height: 400px;
+  width: 300px;
+  margin-top: 150px;
+  background-color: #F1F1F1;
+  padding-top: 5px;
+}
+
+h4 {
+  text-align: center;
+  color:#146C94;
+}
+
+

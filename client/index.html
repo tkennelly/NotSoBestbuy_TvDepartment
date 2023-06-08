@@ -22,22 +22,27 @@
   </header>
   <main>
     <div class="dropdown">
-      <button class="dropbtn">Brands</button>
-      <div class="dropdown-content">
+      <drop1 id="drop1">
+      <button class="dropbtn" id="db1">Brands</button>
+      <div class="dropdown-content" id="ddcontent1">
         <a class="samsung" href="#">Samsung</a>
         <a class="sony" href="#">Sony</a>
         <a class="lg" href="#">LG</a>
         <a class="tcl" href="#">TCL</a>
         <a class="vizio" href="#">VIZIO</a>
       </div>
-      <button class="dropbtn">Price Range</button>
-         <div class="dropdown-content">
+      </drop1>
+      <drop2 id="drop2">
+      <button class="dropbtn" id="db2">Price Range</button>
+         <div class="dropdown-content" id="ddcontent2">
         <a href="#">Budget</a>
         <a href="#">Medium</a>
         <a href="#">High</a>
       </div>
-      <button class="dropbtn">Size</button>
-         <div class="dropdown-content">
+      </drop2>
+      <drop3 id="drop3">
+      <button class="dropbtn" id="db3">Size</button>
+         <div class="dropdown-content" id="ddcontent3">
           <a href="#">24"</a>
           <a href="#">32"</a>
           <a href="#">55"</a>
@@ -47,45 +52,41 @@
           <a href="#">100"</a>
           <a href="#">110"</a>
        </div>
-       <button class="dropbtn">Stock</button>
-         <div class="dropdown-content">
+       </drop3>
+       <drop4 id="drop4">
+       <button class="dropbtn" id="db4">Stock</button>
+         <div class="dropdown-content" id="ddcontent4">
         <a href="#">Low</a>
         <a href="#">High</a>
       </div>
+      </drop4>
     </div>
-
+    <div class="allContent">
     <div class="api-product">
-      <h2 id="name">name: </h2>
-      <h2 id="price">price: </h2>
-      <h2 id="description">description: </h2>
-      <h2 id="brand">brand: </h2>
-      <h2 id="size">size: </h2>
-      <h2 id="model">model: </h2>
-      <h2 id="stock">stock: </h2>
     </div>
-    
-    <div class="api-brand">
-      <h2 id="brand-name">name: </h2>
-      <h2 id="price-range">price: </h2>
-      <h2 id="brand-number">brand number: </h2>
+    <div id="alignReviews">
+    <div id="reviews">
+      <h4>Our Reviews</h4>
     </div>
-
     <form class="review-form">
-      <h2>Submit your review of a TV!</h2>
+      <h2>Write a Review</h2>
       <h3>Rate 1-5 and write a comment, then hit 'submit'!</h3>
-        <input type="radio" id="1star" name="star-rating" value="1">
-        <label for="1star"> 1 Star</label><br>
-        <input type="radio" id="2star" name="star-rating" value="2">
-        <label for="2star"> 2 Stars</label><br>
-        <input type="radio" id="3star" name="star-rating" value="3">
+        <label for="1star"> 1 Star</label>
+        <input class="radios" type="radio" id="1star" name="star-rating" value="1">
+        <label for="2star"> 2 Stars</label>
+        <input class ="radios" type="radio" id="2star" name="star-rating" value="2">
         <label for="3star"> 3 Stars</label>
-        <input type="radio" id="4star" name="star-rating" value="4">
+        <input class="radios" type="radio" id="3star" name="star-rating" value="3">
         <label for="4star"> 4 Stars</label>
-        <input type="radio" id="5star" name="star-rating" value="5">
+        <input class="radios" type="radio" id="4star" name="star-rating" value="4">
         <label for="5star"> 5 Stars</label>
-      <input type="text"></input>
-      <input type="submit">
+        <input class="radios" type="radio" id="5star" name="star-rating" value="5">
+        <br>
+      <textarea rows="3" cols="20"></textarea>
+      <button id="submit2">Submit</button>
     </form>
+    </div>
+    </div>
   </main>
 	<script src="index.js"></script>
   </body>
