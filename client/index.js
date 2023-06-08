@@ -16,7 +16,7 @@ let clickedVIZIO = false
 
 sony.addEventListener('click', ()=> {
     if (clickedSony === false){
-        clickedSony=true
+        clickedSony = true
         sony.style.color = '#00AAD2'
         console.log(clickedSony)
     } else if (clickedSony === true){
@@ -25,23 +25,6 @@ sony.addEventListener('click', ()=> {
         console.log('clicked sony is true')
     }
 })
-
-sonyKey = '6480cfccdf37ae300c0b0a8b'
-samsungKey = '6480cfccdf37ae300c0b0a89'
-lgKey = '6480cfccdf37ae300c0b0a8a'
-tclKey = '6480cfccdf37ae300c0b0a8c'
-vizioKey = '6480cfccdf37ae300c0b0a8d'
-
-
-
-const sonyFunction = async()=>{
-    console.log('running')
-    await axios.get(`http://localhost:3001/api/products/find/query?brand=${sonyKey}`)
-    .then((res)=>{
-        console.log(res)
-        for(let i = 0; i < res.data.products.length;i++){
-            infoList.insertAdjacentHTML('afterbegin',`<li>${res.data.products[i].name}</li>`)
-        }
     })
     .catch((e)=>console.log(e))
 }
@@ -95,7 +78,4 @@ if (clickedSony === true){
 } else {
     submitButton.removeEventListener('click', sonyFunction())
 }
-
-
-
 
