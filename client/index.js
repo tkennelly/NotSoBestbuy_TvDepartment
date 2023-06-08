@@ -11,6 +11,7 @@ let productStock = document.querySelector('#stock')
 let brandName = document.querySelector('#brand-name')
 let priceRange = document.querySelector('#price-range')
 let brandNumber = document.querySelector('#brand-number')
+let img = document.querySelector('#image')
 
 const star1 = document.querySelector('#star1')
 const star2 = document.querySelector('#star2')
@@ -52,6 +53,7 @@ const searchProducts = async() => {
     const response = await axios.get(`http://localhost:3001/api/products`)
     const response2 = await axios.get(`http://localhost:3001/api/brands`)
     if (searchBar.value.includes('Micro LED') === true || searchBar.value.includes('micro LED') === true || searchBar.value.includes('micro led') === true || searchBar.value.includes('microled') === true){
+        img.innerHTML = `<img src="${response.data.products[0].img}"/>`
         productName.innerHTML = `name: ${response.data.products[0].name}`
         productPrice.innerHTML = `price: ${response.data.products[0].price}`
         productDescription.innerHTML = `description: ${response.data.products[0].description}`
@@ -63,6 +65,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[0].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[0].brandNum}`
     } else if (searchBar.value.includes('Neo QLED') === true || searchBar.value.includes('neo QLED') === true || searchBar.value.includes('neo qled') === true || searchBar.value.includes('neoqled') === true){
+        img.innerHTML = `<img src="${response.data.products[1].img}"/>`
         productName.innerHTML = `name: ${response.data.products[1].name}`
         productPrice.innerHTML = `price: ${response.data.products[1].price}`
         productDescription.innerHTML = `description: ${response.data.products[1].description}`
@@ -74,6 +77,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[1].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[1].brandNum}`
     } else if (searchBar.value.includes('C2 Series') === true || searchBar.value.includes('c2 Series') === true || searchBar.value.includes('c2 series') === true || searchBar.value.includes('c2series') === true){
+        img.innerHTML = `<img src="${response.data.products[2].img}"/>`
         productName.innerHTML = `name: ${response.data.products[2].name}`
         productPrice.innerHTML = `price: ${response.data.products[2].price}`
         productDescription.innerHTML = `description: ${response.data.products[2].description}`
@@ -85,6 +89,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[2].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[2].brandNum}`
     } else if (searchBar.value.includes('UQ75 Series') === true || searchBar.value.includes('uq75 Series') === true || searchBar.value.includes('uq75 series') === true || searchBar.value.includes('uq75series') === true){
+        img.innerHTML = `<img src="${response.data.products[3].img}"/>`
         productName.innerHTML = `name: ${response.data.products[3].name}`
         productPrice.innerHTML = `price: ${response.data.products[3].price}`
         productDescription.innerHTML = `description: ${response.data.products[3].description}`
@@ -96,6 +101,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[3].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[3].brandNum}`
     } else if (searchBar.value.includes('BRAVIA XR X92') === true || searchBar.value.includes('Bravia XR X92') === true || searchBar.value.includes('bravia xr x92') === true || searchBar.value.includes('bravia XR X92') === true){
+        img.innerHTML = `<img src="${response.data.products[4].img}"/>`
         productName.innerHTML = `name: ${response.data.products[4].name}`
         productPrice.innerHTML = `price: ${response.data.products[4].price}`
         productDescription.innerHTML = `description: ${response.data.products[4].description}`
@@ -107,6 +113,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[4].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[4].brandNum}`
     } else if (searchBar.value.includes('BRAVIA XR Z9K') === true || searchBar.value.includes('Bravia XR Z9K') === true || searchBar.value.includes('bravia xr Z9K') === true || searchBar.value.includes('bravia xr z9k') === true){
+        img.innerHTML = `<img src="${response.data.products[5].img}"/>`
         productName.innerHTML = `name: ${response.data.products[5].name}`
         productPrice.innerHTML = `price: ${response.data.products[5].price}`
         productDescription.innerHTML = `description: ${response.data.products[5].description}`
@@ -118,6 +125,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[5].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[5].brandNum}`
     } else if (searchBar.value.includes('3-Series HD') === true || searchBar.value.includes('3-series HD') === true || searchBar.value.includes('3-Series hd') === true || searchBar.value.includes('3Series HD') === true){
+        img.innerHTML = `<img src="${response.data.products[6].img}"/>`
         productName.innerHTML = `name: ${response.data.products[6].name}`
         productPrice.innerHTML = `price: ${response.data.products[6].price}`
         productDescription.innerHTML = `description: ${response.data.products[6].description}`
@@ -129,6 +137,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[6].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[6].brandNum}`
     } else if (searchBar.value.includes('3-Series FHD') === true || searchBar.value.includes('3-series FHD') === true || searchBar.value.includes('3-Series fhd') === true || searchBar.value.includes('3Series FHD') === true){
+        img.innerHTML = `<img src="${response.data.products[7].img}"/>`
         productName.innerHTML = `name: ${response.data.products[7].name}`
         productPrice.innerHTML = `price: ${response.data.products[7].price}`
         productDescription.innerHTML = `description: ${response.data.products[7].description}`
@@ -140,6 +149,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[7].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[7].brandNum}`
     } else if (searchBar.value.includes('D-Series LED') === true || searchBar.value.includes('D-series LED') === true || searchBar.value.includes('d-series LED') === true || searchBar.value.includes('d-series led') === true){
+        img.innerHTML = `<img src="${response.data.products[8].img}"/>`
         productName.innerHTML = `name: ${response.data.products[8].name}`
         productPrice.innerHTML = `price: ${response.data.products[8].price}`
         productDescription.innerHTML = `description: ${response.data.products[8].description}`
@@ -151,6 +161,7 @@ const searchProducts = async() => {
         priceRange.innerHTML = `price range: ${response2.data.brands[8].priceRange}`
         brandNumber.innerHTML = `brand number: ${response2.data.brands[8].brandNum}`
     } else if (searchBar.value.includes('D-Series Full') === true || searchBar.value.includes('D-series Full') === true || searchBar.value.includes('d-series full') === true || searchBar.value.includes('D-Series full') === true){
+        img.innerHTML = `<img src="${response.data.products[9].img}"/>`
         productName.innerHTML = `name: ${response.data.products[9].name}`
         productPrice.innerHTML = `price: ${response.data.products[9].price}`
         productDescription.innerHTML = `description: ${response.data.products[9].description}`
