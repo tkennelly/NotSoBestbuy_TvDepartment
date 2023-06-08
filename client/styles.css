@@ -127,13 +127,13 @@ input {
 
 .api-product {
   height: 730px;
-  border: solid 1px white;
   border-radius: 5px;
   background-color: #AFD3E2;
   width: 800px;
   font-size: 12px;
   margin-top: 150px;
   margin-bottom: 50px;
+  padding-left: 20px;
 }
 
 
@@ -177,6 +177,10 @@ input {
 h4 {
   text-align: center;
   color:#146C94;
+}
+
+h2 {
+  font-size: 15px;
 }
 
 
