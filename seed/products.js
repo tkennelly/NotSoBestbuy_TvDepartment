@@ -21,7 +21,7 @@ const main = async () => {
             size: `110"`,
             modelNum: 3295483698,
             itemsInStock: 10,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6536/6536700_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6536/6536700_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class Neo QLED 4k UHD Smart Tizen TV`,
@@ -32,7 +32,7 @@ const main = async () => {
             size: `98"`,
             modelNum: 3295486967,
             itemsInStock: 9,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6478/6478235_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6478/6478235_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class C2 Series OLED evo 4k UHD Smart webOS TV`,
@@ -43,7 +43,7 @@ const main = async () => {
             size: `55"`,
             modelNum: 4629488887,
             itemsInStock: 8,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501498_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501498_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class UQ75 Series LED 4K UHD Smart webOS TV`,
@@ -54,7 +54,7 @@ const main = async () => {
             size: `70"`,
             modelNum: 4629483409,
             itemsInStock: 7,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501936_rd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6501/6501936_rd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class BRAVIA XR X92 LED 4K UHD Full Array Smart Google TV`,
@@ -65,7 +65,7 @@ const main = async () => {
             size: `100"`,
             modelNum: 4793729047,
             itemsInStock: 6,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6463/6463312_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6463/6463312_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class BRAVIA XR Z9K 8K HDR Mini LED Google TV`,
@@ -76,7 +76,7 @@ const main = async () => {
             size: `85"`,
             modelNum: 479372749,
             itemsInStock: 5,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6503/6503451_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6503/6503451_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class 3-Series HD 720p LED Smart Roku TV`,
@@ -87,7 +87,7 @@ const main = async () => {
             size: `32"`,
             modelNum: 5738290571,
             itemsInStock: 4,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6508/6508431_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6508/6508431_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class 3-Series FHD 1080p LED Smart Google TV`,
@@ -98,7 +98,7 @@ const main = async () => {
             size: `32"`,
             modelNum: 5738292897,
             itemsInStock: 3,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6508/6508874_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6508/6508874_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class D-Series LED 720p Smart TV`,
@@ -109,7 +109,7 @@ const main = async () => {
             size: `24"`,
             modelNum: 6950049284,
             itemsInStock: 2,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523393_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523393_sd.jpg;maxHeight=640;maxWidth=550')
           },
           {
             name: `Class D-Series Full HD Smart TV`,
@@ -120,7 +120,7 @@ const main = async () => {
             size: `32"`,
             modelNum: 6950042863,
             itemsInStock: 1,
-            img: 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6476/6476897_sd.jpg;maxHeight=640;maxWidth=550'
+            img: new URL('https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6476/6476897_sd.jpg;maxHeight=640;maxWidth=550')
           }
     ]
     await Product.insertMany(products)
